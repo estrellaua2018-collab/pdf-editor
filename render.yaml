@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: pdf-editor
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
+    headers:
+      - path: /vendor/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
